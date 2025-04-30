@@ -1,0 +1,29 @@
+[build.environment]
+CI = "true"
+NODE_VERSION = "10"
+NPM_CONFIG_OPTIONAL = "false"
+ANTORA_CACHE_DIR = "node_modules/.cache/antora"
+
+[build]
+command = "node_modules/.bin/antora antora-playbook.yml --stacktrace --log-format=pretty"
+# security policies
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src * 'unsafe-eval' 'unsafe-inline' data: filesystem: about: blob:;"
+# redirect any netlify address url to real address
+# redirect for home of sw and cloud docs
+
+# Algolia pendo search test redirect
+
+[[redirects]]
+  from = "https://help-cloud-thoughtspot.netlify.app/software/8.8.1.sw/"
+  to = "https://help-cloud-thoughtspot.netlify.app/cloud/8.8.1.sw/index_help"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "https://help-cloud-thoughtspot.netlify.app/software/8.4.1.sw/"
+  to = "https://help-cloud-thoughtspot.netlify.app/cloud/8.4.1.sw/index_help"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
