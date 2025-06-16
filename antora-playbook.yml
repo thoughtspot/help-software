@@ -19,7 +19,7 @@ content:
 ui:
   bundle:
     # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
-    url: ui-bundle/ui2-bundle.zip
+    url: ui-bundle/uidev-bundle.zip
   supplemental_files:
   - path: .nojekyll
   - path: ui.yml
