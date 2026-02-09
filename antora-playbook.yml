@@ -1,6 +1,7 @@
 site:
   title: ThoughtSpot Documentation
   url: https://help-software.vercel.app
+  robots: disallow
   start_page: home::index.adoc
 content:
   sources:
